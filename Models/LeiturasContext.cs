@@ -19,7 +19,7 @@ namespace projint.Models
         }
 
         public virtual DbSet<Equipamento> Equipamentos { get; set; }
-        public virtual DbSet<Leitore> Leitores { get; set; }
+        public virtual DbSet<Leitores> Leitores { get; set; }
         public virtual DbSet<Leitura> Leituras { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -54,7 +54,7 @@ namespace projint.Models
                     .HasColumnName("nome");
             });
 
-            modelBuilder.Entity<Leitore>(entity =>
+            modelBuilder.Entity<Leitores>(entity =>
             {
                 entity.ToTable("leitores");
 
