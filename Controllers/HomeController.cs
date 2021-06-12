@@ -37,7 +37,7 @@ namespace projint.Controllers
 
         public IActionResult Equipamentos()
         {
-            List<Equipamento> lista = _context.Equipamentos.ToList();
+            List<Equipamentos> lista = _context.Equipamentos.ToList();
             string tabela = "";
             foreach (var i in lista){
                 tabela += "<tr><td>" + i.Id + "</td><td>" + i.Nome + "</td></tr>";

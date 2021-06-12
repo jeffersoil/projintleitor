@@ -1,14 +1,11 @@
-﻿using System;
+﻿using System.Net.Mime;
+using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.Extensions.Configuration;
-#nullable disable
-
 namespace projint.Models
 {
     public partial class LeiturasContext : DbContext
     {
-        private IConfiguration Configuracao {get;set;}
         public LeiturasContext()
         {
         }
@@ -18,40 +15,38 @@ namespace projint.Models
         {
         }
 
-        public virtual DbSet<Equipamento> Equipamentos { get; set; }
+        public virtual DbSet<Equipamentos> Equipamentos { get; set; }
         public virtual DbSet<Leitores> Leitores { get; set; }
-        public virtual DbSet<Leitura> Leituras { get; set; }
+        public virtual DbSet<Leituras> Leituras { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Server=tcp:projintjeff.database.windows.net,1433;Initial Catalog=dbHospitalar;Persist Security Info=False;User ID=jeff;Password=daniel.aline10;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
-
-            modelBuilder.Entity<Equipamento>(entity =>
+            modelBuilder.Entity<Equipamentos>(entity =>
             {
                 entity.ToTable("equipamentos");
 
                 entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
-                    .HasColumnName("id");
+                    .HasColumnName("id")
+                    .ValueGeneratedNever();
 
                 entity.Property(e => e.Codigo)
+                    .HasColumnName("codigo")
                     .HasMaxLength(20)
-                    .IsUnicode(false)
-                    .HasColumnName("codigo");
+                    .IsUnicode(false);
 
                 entity.Property(e => e.Nome)
+                    .HasColumnName("nome")
                     .HasMaxLength(60)
-                    .IsUnicode(false)
-                    .HasColumnName("nome");
+                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<Leitores>(entity =>
@@ -59,35 +54,32 @@ namespace projint.Models
                 entity.ToTable("leitores");
 
                 entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
-                    .HasColumnName("id");
+                    .HasColumnName("id")
+                    .ValueGeneratedNever();
 
                 entity.Property(e => e.Endereco)
                     .IsRequired()
+                    .HasColumnName("endereco")
                     .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("endereco");
+                    .IsUnicode(false);
 
                 entity.Property(e => e.Localidade)
                     .IsRequired()
+                    .HasColumnName("localidade")
                     .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("localidade");
+                    .IsUnicode(false);
             });
 
-            modelBuilder.Entity<Leitura>(entity =>
+            modelBuilder.Entity<Leituras>(entity =>
             {
                 entity.ToTable("leituras");
 
-                entity.Property(e => e.Id)
-                    .ValueGeneratedOnAdd()
-                    .HasColumnName("id");
+                entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Data)
-                    .HasColumnType("datetime")
                     .HasColumnName("data")
-                    .IsRequired()
-                    .HasDefaultValueSql("(sysdatetime())");
+                    .HasColumnType("datetime")
+                    .HasDefaultValueSql("(getdate())");
 
                 entity.Property(e => e.IdEquipamentos).HasColumnName("idEquipamentos");
 

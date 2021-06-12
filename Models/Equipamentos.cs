@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace projint.Models
 {
-    public partial class Leitores
+    public partial class Equipamentos
     {
         public int Id { get; set; }
-        public string Localidade { get; set; }
-        public string Endereco { get; set; }
+        public string Nome { get; set; }
+        public string Codigo { get; set; }
     }
 }

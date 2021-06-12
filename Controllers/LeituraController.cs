@@ -38,7 +38,7 @@ namespace projint.Controllers
                 var _equipamento = _context.Equipamentos.Where(w=>w.Codigo == etiqueta);
                 var _leitor = _context.Leitores.Where(w=>w.Endereco == leitor);
                 if(_equipamento.Any() && _leitor.Any()){
-                    Leitura leitura = new Leitura();
+                    Leituras leitura = new Leituras();
                     leitura.IdEquipamentos = _equipamento.First().Id;
                     leitura.IdLeitores = _leitor.First().Id;
                     _context.Leituras.Add(leitura);
