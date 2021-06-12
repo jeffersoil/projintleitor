@@ -37,7 +37,7 @@ namespace projint.Controllers
             if(!string.IsNullOrWhiteSpace(leitor) && !string.IsNullOrWhiteSpace(etiqueta)){
                 var _equipamento = _context.Equipamentos.Where(w=>w.Codigo == etiqueta);
                 var _leitor = _context.Leitores.Where(w=>w.Endereco == leitor);
-                if(_equipamento != null && _leitor!= null){
+                if(_equipamento.Any() && _leitor.Any()){
                     Leitura leitura = new Leitura();
                     leitura.IdEquipamentos = _equipamento.First().Id;
                     leitura.IdLeitores = _leitor.First().Id;
