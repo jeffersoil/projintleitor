@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Últimas Localizações</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Equipamento
+                </th>
+                <th>
+                    Local
+                </th>
+                <th>
+                    Data
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @Html.Raw(ViewBag.lista)
+        </tbody>
+    </table>
+    <script type="text/javascript">
+        window.setTimeout(function(){window.location.reload()},10000);
+    </script>
+</div>

@@ -98,3 +98,4 @@ C:\projint\obj\Debug\netcoreapp3.1\projint.pdb
 C:\projint\obj\Debug\netcoreapp3.1\projint.genruntimeconfig.cache
 C:\projint\obj\Debug\netcoreapp3.1\Razor\Views\Home\Leitores.cshtml.g.cs
 C:\projint\obj\Debug\netcoreapp3.1\Razor\Views\Leitura\IncluirLeitura.cshtml.g.cs
+C:\projint\obj\Debug\netcoreapp3.1\Razor\Views\Home\Leituras.cshtml.g.cs
