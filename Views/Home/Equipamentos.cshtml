@@ -1,0 +1,19 @@
+@{
+    ViewData["Title"] = "Equipamentos";
+}
+<h1>@ViewData["Title"]</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Equipamento
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @Html.Raw(ViewBag.lista)
+        </tbody>
+    </table>
