@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "bin\\Release\\netcoreapp3.1\\publish",
+    "appService.defaultWebAppToDeploy": "/subscriptions/757425e9-b265-4836-8bb2-6cccf363ef34/resourceGroups/projint/providers/Microsoft.Web/sites/projinhositalar"
+}
