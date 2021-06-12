@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\projint\\projint.csproj": {}
+    "C:\\projint\\projint.csproj": {}
   },
   "projects": {
-    "c:\\projint\\projint.csproj": {
+    "C:\\projint\\projint.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\projint\\projint.csproj",
+        "projectUniqueName": "C:\\projint\\projint.csproj",
         "projectName": "projint",
-        "projectPath": "c:\\projint\\projint.csproj",
+        "projectPath": "C:\\projint\\projint.csproj",
         "packagesPath": "C:\\Users\\jeffersoil\\.nuget\\packages\\",
-        "outputPath": "c:\\projint\\obj\\",
+        "outputPath": "C:\\projint\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

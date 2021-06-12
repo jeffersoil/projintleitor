@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mloqEuY7nh1XTvN5CuCv8fXnNH9VazgXCcC7AMMRTf3Qp7hVJPJc840ptAWZ64F1oPPSDe/iPD9qyTD5zwGfOw==",
+  "dgSpecHash": "lElkhQbe5BNY6CYbEUlgQeoo0JNgFwkx/FYvu+rpjQs2Oy48GyY4zy/oBPDb+LJziVtM2zXGV0pSXLr6f2wRDg==",
   "success": true,
-  "projectFilePath": "c:\\projint\\projint.csproj",
+  "projectFilePath": "C:\\projint\\projint.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jeffersoil\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\jeffersoil\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
