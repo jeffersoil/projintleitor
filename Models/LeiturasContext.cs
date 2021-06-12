@@ -80,7 +80,7 @@ namespace projint.Models
                 entity.ToTable("leituras");
 
                 entity.Property(e => e.Id)
-                    .HasColumnType("numeric(10, 0)")
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("id");
 
                 entity.Property(e => e.Data)
