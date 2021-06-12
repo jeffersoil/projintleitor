@@ -10,6 +10,6 @@ namespace projint.Models
         public decimal Id { get; set; }
         public int IdLeitores { get; set; }
         public int IdEquipamentos { get; set; }
-        public DateTime? Data { get; set; }
+        public DateTime Data { get; set; }
     }
 }
