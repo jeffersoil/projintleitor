@@ -31,7 +31,6 @@ namespace projint.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        [HttpPost]
         public ActionResult incluirLeitura(string leitor, string etiqueta){
             if(!string.IsNullOrWhiteSpace(leitor) && !string.IsNullOrWhiteSpace(etiqueta)){
                 var _equipamento = _context.Equipamentos.Where(w=>w.Codigo == etiqueta);
