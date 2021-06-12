@@ -86,6 +86,7 @@ namespace projint.Models
                 entity.Property(e => e.Data)
                     .HasColumnType("datetime")
                     .HasColumnName("data")
+                    .IsRequired()
                     .HasDefaultValueSql("(sysdatetime())");
 
                 entity.Property(e => e.IdEquipamentos).HasColumnName("idEquipamentos");

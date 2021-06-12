@@ -29,7 +29,7 @@ namespace projint.Controllers
                     .Join(_context.Leitores,i=>new{id= i.IdLeitores},j=>new{id= j.Id},(i,j)=> new{ i.Data, i.Nome, j.Localidade }).ToList();
             string retorno = "";
             foreach(var i in leituras){
-                retorno += "<tr><td>" + i.Nome + "</td><td>" + i.Localidade + "</td><td>" + i.Data.Value.ToString("dd/MM/yyyy HH:mm") + "</td></tr>";
+                retorno += "<tr><td>" + i.Nome + "</td><td>" + i.Localidade + "</td><td>" + i.Data.ToString("dd/MM/yyyy HH:mm") + "</td></tr>";
             }
             ViewBag.lista = retorno;
             return View();
@@ -64,7 +64,7 @@ namespace projint.Controllers
                     .Join(_context.Leitores,i=>new{id= i.IdLeitores},j=>new{id= j.Id},(i,j)=> new{ i.Data, i.Nome, j.Localidade }).ToList();
             string retorno = "";
             foreach(var i in leituras){
-                retorno += "<tr><td>" + i.Nome + "</td><td>" + i.Localidade + "</td><td>" + i.Data.Value.ToString("dd/MM/yyyy HH:mm") + "</td></tr>";
+                retorno += "<tr><td>" + i.Nome + "</td><td>" + i.Localidade + "</td><td>" + i.Data.ToString("dd/MM/yyyy HH:mm") + "</td></tr>";
             }
             ViewBag.lista = retorno;
             return View();
